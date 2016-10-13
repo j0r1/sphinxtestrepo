@@ -139,12 +139,8 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #html_theme = "classic-mod"
 # html_theme_path = [ "." ]
 
-import os
-print(os.getcwd())
-sys.path += [ os.getcwd() ]
-import rtd_theme
-html_theme = 'rtd_theme'
-html_theme_path = [ rtd_theme.get_html_theme_path() ]
+html_theme = 'sphinx_rtd_theme-mod'
+html_theme_path = [ "." ]
 
 #html_theme_options = {
 #    "rightsidebar": "true",
