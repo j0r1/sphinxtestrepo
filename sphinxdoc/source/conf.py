@@ -129,6 +129,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -136,9 +137,12 @@ todo_include_todos = False
 # a list of builtin themes.
 #html_theme = 'alabaster'
 #html_theme = "classic-mod"
-html_theme = "sphinx_rtd_theme-base"
+# html_theme_path = [ "." ]
 
-html_theme_path = [ "." ]
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 #html_theme_options = {
 #    "rightsidebar": "true",
@@ -338,14 +342,14 @@ finally:
 
 curpath = os.getcwd()
 try:
-    if os.getenv("READTHEDOCS") == 'True':
+    if on_rtd:
         dstdir = "_build/html"
     else:
         dstdir = "../build/html"
     
     dstdir = os.path.abspath(dstdir)
 
-    if os.getenv("READTHEDOCS") == 'True' and os.path.exists("../../Doxyfile"):
+    if on_rtd and os.path.exists("../../Doxyfile"):
         os.chdir("../../")
         subprocess.call("doxygen", shell=True)
         docudir = os.path.join(dstdir, "documentation")
