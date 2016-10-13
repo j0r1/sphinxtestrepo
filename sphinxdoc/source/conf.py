@@ -76,7 +76,12 @@ def getVersion():
 
     raise Exception("No version number found")
 
-version = getVersion()
+try:
+    version = getVersion()
+except Exception as e:
+    print("Warning: can't get version: {}".format(e))
+    version = "unknown"
+
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -340,7 +345,7 @@ try:
     
     dstdir = os.path.abspath(dstdir)
 
-    if os.getenv("READTHEDOCS") == 'True':
+    if os.getenv("READTHEDOCS") == 'True' and os.path.exists("../../Doxyfile"):
         os.chdir("../../")
         subprocess.call("doxygen", shell=True)
         docudir = os.path.join(dstdir, "documentation")
