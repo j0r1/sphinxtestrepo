@@ -136,7 +136,7 @@ todo_include_todos = False
 # a list of builtin themes.
 #html_theme = 'alabaster'
 #html_theme = "classic-mod"
-html_theme = "rtd-mod"
+html_theme = "sphinx_rtd_theme-base"
 
 html_theme_path = [ "." ]
 
