@@ -139,8 +139,8 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #html_theme = "classic-mod"
 # html_theme_path = [ "." ]
 
-print("Current theme: {}".format(html_theme))
-print("Current theme path: {}".format(html_theme_path))
+#print("Current theme: {}".format(html_theme))
+#print("Current theme path: {}".format(html_theme_path))
 import sys
 print("sys.path = {}".format(sys.path))
 
