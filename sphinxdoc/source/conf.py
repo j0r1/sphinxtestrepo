@@ -142,6 +142,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #print("Current theme: {}".format(html_theme))
 #print("Current theme path: {}".format(html_theme_path))
 import sys
+import subprocess
 for p in sys.path:
     print("sys.path = {}".format(p))
 
