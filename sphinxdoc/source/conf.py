@@ -151,8 +151,9 @@ try:
 except Exception as e:
     print("Can't run 'find': {}".format(e))
 
-html_theme = 'sphinx_rtd_theme-mod'
-html_theme_path = [ "." ]
+#html_theme = 'sphinx_rtd_theme-mod'
+html_theme = 'default'
+#html_theme_path = [ "." ]
 
 #html_theme_options = {
 #    "rightsidebar": "true",
