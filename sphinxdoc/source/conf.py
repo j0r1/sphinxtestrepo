@@ -147,7 +147,7 @@ for p in sys.path:
     print("sys.path = {}".format(p))
 
 try:
-    subprocess.call("find {} -name layout.html".format(sys.path[-1]))
+    subprocess.call("find {} -name layout.html".format(sys.path[-1]), shell=True)
 except Exception as e:
     print("Can't run 'find': {}".format(e))
 
