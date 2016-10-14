@@ -139,20 +139,12 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #html_theme = "classic-mod"
 # html_theme_path = [ "." ]
 
-#print("Current theme: {}".format(html_theme))
-#print("Current theme path: {}".format(html_theme_path))
-import sys
-import subprocess
-for p in sys.path:
-    print("sys.path = {}".format(p))
+html_theme = 'sphinx_rtd_theme'
+html_context = {
+        'extra_css_files': [ "_static/theme-mod.css" ],
+        'script_files': [ "_static/inspectlinks.js" ],
+}
 
-try:
-    subprocess.call("find {} -name layout.html".format(sys.path[-1]), shell=True)
-except Exception as e:
-    print("Can't run 'find': {}".format(e))
-
-#html_theme = 'sphinx_rtd_theme-mod'
-html_theme = 'default'
 #html_theme_path = [ "." ]
 
 #html_theme_options = {
