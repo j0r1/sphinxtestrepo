@@ -142,7 +142,13 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #print("Current theme: {}".format(html_theme))
 #print("Current theme path: {}".format(html_theme_path))
 import sys
-print("sys.path = {}".format(sys.path))
+for p in sys.path:
+    print("sys.path = {}".format(p))
+
+try:
+    subprocess.call("find {} -name layout.html".format(sys.path[-1]))
+except Exception as e:
+    print("Can't run 'find': {}".format(e))
 
 html_theme = 'sphinx_rtd_theme-mod'
 html_theme_path = [ "." ]
