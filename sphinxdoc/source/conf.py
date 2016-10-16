@@ -142,12 +142,13 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #if not on_rtd:
 #    html_theme = 'sphinx_rtd_theme'
 
-html_context = {
+#html_context = {
 #        'extra_css_files': [ "_static/theme-mod.css" ],
 #        'script_files': [ "_static/inspectlinks.js" ],
-}
+#}
 
-#html_theme_path = [ "." ]
+html_theme = "rtd-mod"
+html_theme_path = [ "." ]
 
 #html_theme_options = {
 #    "rightsidebar": "true",
