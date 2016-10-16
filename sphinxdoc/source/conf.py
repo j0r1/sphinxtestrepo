@@ -143,8 +143,8 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #    html_theme = 'sphinx_rtd_theme'
 
 html_context = {
-        'extra_css_files': [ "_static/theme-mod.css" ],
-#        'script_files': [ "_static/inspectlinks.js" ],
+#        'extra_css_files': [ "_static/theme-mod.css" ],
+        'script_files': [ "_static/inspectlinks.js" ],
 }
 
 #html_theme_path = [ "." ]
