@@ -1,5 +1,6 @@
 (function() 
 {
+    /*
     document.addEventListener("DOMContentLoaded", function(event) 
     {
         // Don't do anything if we're running on localhost or viewing as a file
@@ -38,4 +39,5 @@
             }
         }
     });
+    */
 })();
