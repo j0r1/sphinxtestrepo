@@ -139,13 +139,13 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #html_theme = "classic-mod"
 # html_theme_path = [ "." ]
 
-if not on_rtd:
-    html_theme = 'sphinx_rtd_theme'
+#if not on_rtd:
+#    html_theme = 'sphinx_rtd_theme'
 
-html_context = {
-        'extra_css_files': [ "_static/theme-mod.css" ],
-        'script_files': [ "_static/inspectlinks.js" ],
-}
+#html_context = {
+#        'extra_css_files': [ "_static/theme-mod.css" ],
+#        'script_files': [ "_static/inspectlinks.js" ],
+#}
 
 #html_theme_path = [ "." ]
 
