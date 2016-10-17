@@ -150,8 +150,8 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #html_theme = "rtd-mod"
 #html_theme_path = [ "." ]
 
-#html_theme = "mytheme"
-#html_theme_path = [ "." ]
+html_theme = "mytheme"
+html_theme_path = [ "." ]
 
 #html_theme_options = {
 #    "rightsidebar": "true",
